@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migwani Boys Secondary School</title>
+    <style>
+        /* styles.css */
+        body {
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipPIG6moRBH5SpsIWzFXjVw6hwFNBH4htSy7GDr6=s680-w680-h510');
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(64, 64, 145, 0.9);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .title {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logout {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .horizontal-menu {
+            background-color: rgb(59, 5, 5);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .horizontal-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .horizontal-menu ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .horizontal-menu ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .horizontal-menu ul li a:hover {
+            background-color: rgb(61, 4, 4);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: black;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+        }
+
+        .horizontal-menu ul li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .sub-dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: rgb(5, 61, 17);
+            top: 0;
+            left: 100%;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu li:hover .sub-dropdown-menu {
+            display: block;
+        }
+
+        .sub-dropdown-menu li a:hover {
+            background-color: darkred;
+        }
+
+        .footer {
+            background-color: rgba(80, 64, 138, 0.9);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer .social-media {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer .social-media a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer .social-media a:hover {
+            color: lightgray;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer .motto {
+            text-align: center;
+        }
+
+        .footer .motto p {
+            margin: 0;
+        }
+
+        h1 {
+            color: black;
+            font-weight: bold;
+        }
+
+        p {
+            color: rgb(8, 8, 8);
+            font-weight: bold;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .content span {
+            color: black;
+        }
+
+        .core-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .core-values ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPo-AoNf1qTISY_YCSOIeRr7PRJ7sus73yjIHqC=s680-w680-h510" alt="School Logo">
+                <h1 class="title">Migwani Boys Secondary School</h1>
+            </div>
+            <a href="#" class="logout">Log Out</a>
+        </div>
+        <nav class="horizontal-menu">
+            <ul>
+                <li>
+                    <a href="#">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#academics">Subjects</a></li>
+                        <li><a href="#">Faculty</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Co-curricular Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#co-curricular">Activities</a></li>
+                        <li><a href="#">Clubs and Societies</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Portal</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Students' Portal</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Teachers' Portal</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Parents' Portal</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Administrator</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <h1>About Us</h1>
+        <p>Welcome to Migwani Boys Secondary School. The Migwani Boys Secondary School is an extra County school and the only Boy's boarding school located in Migwani town in Mwingi South Constituency within Kitui county, within the Eastern Region of Kenya. We are committed to providing high-quality education and fostering a supportive learning environment. The school has maintained a good run in performance at the Kenya National Examinations Council, KNEC, exams. In the Kenya Certificate of Secondary Education, KCSE, exams the school posts good results to rank among the best schools in the County.</p>
+
+        <h1 id="academics">Academics</h1>
+        <p>Explore our diverse range of academic programs; Computer Studies, Mathematics, English, Kiswahili, Physics, Chemistry, Biology, Business Studies, Geography, History, CRE, Art, Music, etc. Our dedicated faculty members ensure a rigorous curriculum.</p>
+
+        <h1 id="co-curricular">Co-curricular Activities</h1>
+        <p>Explore our range of co-curricular activities, including sports, cultural activities, and extra-curricular activities. Our clubs and societies provide a unique and engaging learning experience.</p>
+        
+        <h1>Admissions</h1>
+        <p>Ready to join us? Learn about our admission requirements, application process, and important dates. We look forward to welcoming you!</p>
+        
+        <h1>Core Values</h1>
+        <div class="core-values">
+            <ul>
+                <li>Integrity</li>
+                <li>Respect</li>
+            </ul>
+            <ul>
+                <li>Excellence</li>
+                <li>Responsibility</li>
+            </ul>
+            <ul>
+                <li>Innovation</li>
+                <li>Teamwork</li>
+            </ul>
+            <ul>
+                <li>Inclusivity</li>
+                <li>Leadership</li>
+            </ul>
+        </div>
+        
+        <h1>Mission</h1>
+        <p>Our mission is to provide a holistic education that fosters intellectual development, moral integrity, and social responsibility, preparing our students to be productive and innovative members of society.</p>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Migwani Boys Secondary School. All rights reserved.</p>
+        <div class="motto">
+            <p>Motto: Believe to Achieve</p>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </footer>
+</body>
+</html>
+
 
